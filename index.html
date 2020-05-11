@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <title>PostMan Clone</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Post Clone</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </nav>
+  <div class="container">
+    <h1 class="center my-3 text-center">Welcome to PostMan Clone</h2>
+    <p class="center mt-1 mb-3">
+      This is the best place for placing GET and POST request
+    </p>
+    <div class="my-4">
+
+      <fieldset class="form-group">
+        <div class="form-group row my-2">
+          <label for="inputurl" class="col-sm-4 col-form-label">URL</label>
+          <div class="col-sm-8">
+            <input type="email" class="form-control" id="inputurl">
+          </div>
+        </div>
+        <div class="row my-2">
+          <legend class="col-form-label col-sm-4 pt-0">Request Type</legend>
+          <div class="col-sm-8">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="radios" id="get" value="get" checked>
+              <label class="form-check-label" for="get">
+                GET
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="radios" id="post" value="post">
+              <label class="form-check-label" for="post">
+                POST
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <div class="col-md-4">
+            <label>Content Type</label>
+          </div>
+          <div class="col-md-8">
+            <div class="form-check">
+              <input type="radio" class="form-check-input" name="type" id="json" value="json" checked>
+              <label for="json" class="form-check-label">JSON</label>
+            </div>
+            <div class="form-check">
+              <input type="radio" class="form-check-input" name="type" id="otherparameter" value="customParamter" >
+              <label for="otherparameter" class="form-check-label">Custom Parameters</label>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="form-group row" id="parameterDiv">
+          <div class="col-md-4">
+            <label>Parameter 1</label>
+          </div>
+          <div class="col-md-3">
+            <input type="text" class="form-control key" placeholder="Enter the Key" id="keyparameter1">
+          </div>
+          <div class="col-md-3">
+            <input type="text" class="form-control" placeholder="Enter the Value" id="valueparameter1">
+          </div>
+          <div class="col-md-2">
+            <button class="btn btn-primary" id="addBtn">
+              +
+            </button>
+          </div>
+        </div>
+        <div id="paramsDiv"></div>
+        <div class="form-group row my-2" id="jsonDiv">
+          <label for="jsonBody" class="col-sm-4 col-form-label">Enter Request JSON</label>
+          <div class="col-sm-8">
+            <textarea class="form-control" id="jsonBody" rows="1"></textarea>
+          </div>
+        </div>
+        <div class="form-group row">
+          <button type="button" class="btn btn-primary" id="submitBtn">Submit</button>
+        </div>
+        <div class="form-group row">
+          <label for="responseText" class="col-sm-4 col-form-label">Response</label>
+          <div class="col-sm-8">
+            <textarea class="form-control" id="responseText" rows="6"
+              placeholder="Your response will appear here..."></textarea>
+          </div>
+        </div>
+      </fieldset>
+
+    </div>
+  </div>
+
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+
+<div class="form-group row" id="customparams">
+  <label for="params1" class="col-sm-3 col-form-label">Parameters</label>
+  <div class="col-sm-4">
+    <input type="text" class="form-control" id="param1" placeholder="Key">
+  </div>
+  <div class="col-sm-4">
+    <input type="text" class="form-control" id="param2" placeholder="Value">
+  </div>
+  <div class="col-sm-1">
+    <button type="button" class="btn btn-primary" id="plusBtn">+</button>
+  </div>
+</div> -->
